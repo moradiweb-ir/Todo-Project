@@ -5,7 +5,7 @@ export default function Todo(){
     const [Todos,setTodos]=useState([
         {
             id:uuidv4(),
-            tittle : "Lest Do It",
+            tittle : "Lest Do It email",
             status : false
         },
         {
