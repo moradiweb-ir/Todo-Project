@@ -27,9 +27,17 @@ export default function Todo(){
         }
       }
 
-      const DeleteItemIcon =()=>{
-        console.log("Delete icon")
+      const DeleteItemIcon =(todo)=>{
+        // console.log("Delete icon",todo)
+        // setTodos([]);
+        let newlist=Todos.filter((todoitem)=>{
+            return todo.id != todoitem.id;
+            
+      })
+      setTodos(newlist);
       }
+    
+    
 
 
 return(

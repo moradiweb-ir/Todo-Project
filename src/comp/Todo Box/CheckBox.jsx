@@ -11,7 +11,7 @@ export default function CheckBox({TodoData,DeleteIcon}){
             <p  className={`inline-block mt-1 ml-2 text-gray-600 ${TodoData?.status ? "line-through" : ""}`}>{TodoData?.tittle}</p>
         </div>
         <button  type="button" className="absolute right-0 flex items-center space-x-1">
-        <Deleticon onclick={()=>DeleteIcon()} />
+        <Deleticon onclick={()=>DeleteIcon(TodoData)} />
         <Editeicon/>   
         </button> 
         </li>
