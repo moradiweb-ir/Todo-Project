@@ -1,18 +1,9 @@
-import { StrictMode } from 'react'
-import './App.css'
-import Todo from './comp/Todo Box/Todo'
+import { StrictMode } from "react";
+import "./App.css";
+import Todo from "./comp/Todo Box/Todo";
 
 function App() {
-
-
-  return (
-    // <StrictMode>
- <Todo/>
-    // </StrictMode>
-
-   
-  )
+  return <Todo />;
 }
 
-export default App
- 
+export default App;
