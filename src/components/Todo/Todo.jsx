@@ -19,7 +19,6 @@ const initialTodos = [
 function Todo() {
   const [todos, setTodos] = useState(initialTodos);
   const [tittle,setTittle] = useState()
-  
   const handleAddTodo = (event) => {
     event.preventDefault();
       setTodos([
@@ -52,10 +51,10 @@ function Todo() {
           <div className="relative">
             <form onSubmit={handleAddTodo} >
               <input
-              value={tittle}
-              onChange={(event)=>{(setTittle)}}
                 placeholder="What needs to be done today?"
                 className="w-full px-2 py-3 border rounded outline-none border-grey-600"
+                value={tittle}
+              onChange={e => setTittle(e.target.value)}
               />
             </form>
 
