@@ -29,6 +29,7 @@ function Todo() {
           status: false,
         },
       ]);
+      setTittle('');
   };
 
   const DeleteItemIcon = (todo) => {
