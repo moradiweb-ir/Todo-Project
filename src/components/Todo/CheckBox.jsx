@@ -2,7 +2,7 @@ import Deleticon from "./DeletIcon";
 import Editeicon from "./editeicon";
 import Todo from "./Todo";
 
-export default function CheckBox({ TodoData, DeleteIcon }) {
+export default function CheckBox({ TodoData, DeleteIcon , todotoggelstatus}) {
   return (
     <ul className="list-reset">
       <li className="relative flex items-center justify-between px-2 py-6 border-b">
@@ -10,8 +10,7 @@ export default function CheckBox({ TodoData, DeleteIcon }) {
           <input
             type="checkbox"
             checked={TodoData?.status}
-            onChange={() => {}}
-            className=""
+            onChange={() => {todotoggelstatus(TodoData)}}
           />
           <p
             className={`inline-block mt-1 ml-2 text-gray-600 ${

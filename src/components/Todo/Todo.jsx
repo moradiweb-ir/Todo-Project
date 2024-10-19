@@ -16,6 +16,8 @@ const initialTodos = [
     status: true,
   },
 ];
+
+
 function Todo() {
   const [todos, setTodos] = useState(initialTodos);
   const [tittle,setTittle] = useState('');
@@ -32,12 +34,27 @@ function Todo() {
       setTittle('');
   };
 
+
+
   const DeleteItemIcon = (todo) => {
     let newlist = todos.filter((todoitem) => {
       return todo.id != todoitem.id;
     });
     setTodos(newlist);
   };
+
+
+  let todotoggelstatus =(todo)=>{
+    let newstatus= todos.map((todoitem)=>{
+      if(todo.id===todoitem.id){
+        todoitem.status = ! todoitem.status
+      }
+      return todoitem
+    })
+    setTodos(newstatus)
+  }
+
+
 
   return (
     <>
@@ -66,6 +83,7 @@ function Todo() {
                 key={index}
                 TodoData={todo}
                 DeleteIcon={DeleteItemIcon}
+                todotoggelstatus={todotoggelstatus}
               />
             ))}
           </div>
