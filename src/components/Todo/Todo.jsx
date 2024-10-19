@@ -80,7 +80,7 @@ function Todo() {
             <form onSubmit={handleAddTodo} >
               <input
   
-                placeholder="What needs to be done today?"
+                placeholder="input Text Me"
                 className="w-full px-2 py-3 border rounded outline-none border-grey-600"
                value={tittle}
                 onChange={(e)=>setTittle(e.target.value)}
