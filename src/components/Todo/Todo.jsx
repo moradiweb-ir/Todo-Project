@@ -54,6 +54,16 @@ function Todo() {
     setTodos(newstatus)
   }
 
+  let edittoggeltittle =(todo,newtittleedit)=>{
+    let newtittle= todos.map((todoitem)=>{
+      if(todo.id===todoitem.id){
+        todoitem.tittle = newtittleedit
+      }
+      return todoitem
+    })
+    setTodos(newtittle)
+  }
+
 
 
   return (
@@ -84,6 +94,7 @@ function Todo() {
                 TodoData={todo}
                 DeleteIcon={DeleteItemIcon}
                 todotoggelstatus={todotoggelstatus}
+                edittoggeltittle={edittoggeltittle}
               />
             ))}
           </div>
